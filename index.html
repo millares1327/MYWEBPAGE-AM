@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Aizie Millares | Profile</title>
+</head>
+<body>
+    <main class="profile-card">
+        <header class="topbar">
+            <a class="brand" href="#" aria-label="Aizie Millares home">A.M<span>.</span></a>
+            <span class="topbar-label">PERSONAL PROFILE</span>
+        </header>
+
+        <section class="intro" aria-labelledby="profile-name">
+            <div class="portrait-column">
+                <div class="profile-photo-frame">
+                    <img class="profile-photo" src="Screenshot%202026-11-13%20125145.png" alt="Aizie Millares profile photo">
+                </div>
+                <span class="photo-caption">PROFILE PHOTO</span>
+            </div>
+
+            <div class="intro-copy">
+                <p class="eyebrow"><span class="status-dot"></span> ICT STUDENT</p>
+                <h1 id="profile-name">Hi, I'm <span>Aizie.</span></h1>
+                <p class="intro-text">Welcome to my little corner of the internet. I'm a <span class="age-value">17</span>-year-old student who loves learning, exploring, and making time for the things I enjoy.</p>
+                <div class="quick-facts">
+                    <span><span class="fact-icon">✦</span> <span class="age-value">17</span> years old</span>
+                    <span><span class="fact-icon">⌘</span> ICT student</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="interests" aria-labelledby="interests-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">A FEW THINGS I LOVE</p>
+                    <h2 id="interests-title">My hobbies<span>.</span></h2>
+                </div>
+                <span class="heading-sparkle" aria-hidden="true">✳</span>
+            </div>
+            <div class="hobby-grid">
+                <article class="hobby-card">
+                    <span class="hobby-icon" aria-hidden="true">✧</span>
+                    <h3>eating</h3>
+                    <p>Enjoying a good meal.</p>
+                     <div class="restaurant-links">
+                        <a href="https://momentfood.com/" target="_blank" rel="noopener noreferrer">moment food<span aria-hidden="true">↗</span></a>
+                        <a href="https://www.facebook.com/gubatquezoncity/" target="_blank" rel="noopener noreferrer">gubat<span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
+                <article class="hobby-card">
+                    <span class="hobby-icon" aria-hidden="true">〰</span>
+                    <h3>reading</h3>
+                    <p>Getting lost in a good story.</p>
+                     <div class="web-links">
+                        <a href="https://www.mangago.me/" target="_blank" rel="noopener noreferrer">mangago <span aria-hidden="true">↗</span></a>
+                        <a href="https://mgjinx.vip/" target="_blank" rel="noopener noreferrer">mgjinx <span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
+                <article class="hobby-card">
+                    <span class="hobby-icon" aria-hidden="true">◈</span>
+                    <h3>Playing games</h3>
+                    <p>Pick a game and have a little fun.</p>
+                    <div class="game-links">
+                        <a href="https://www.google.com/logos/2010/pacman10-i.html" target="_blank" rel="noopener noreferrer">Play Pac-Man <span aria-hidden="true">↗</span></a>
+                        <a href="https://flappybird.io/" target="_blank" rel="noopener noreferrer">Play Flappy Bird <span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <footer class="profile-footer">
+            <span>Thanks for stopping by <span class="footer-heart">♥</span></span>
+            <div class="social-links">
+                <a href="https://www.facebook.com/aizie.millares.7" target="_blank" rel="noopener noreferrer">Facebook <span aria-hidden="true">↗</span></a>
+                <a href="tel:+639566844966">Call 0956-684-4966 <span aria-hidden="true">↗</span></a>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        const birthDate = { year: 2009, month: 6, day: 27 };
+        const today = new Date();
+        const birthdayPassed = today.getMonth() + 1 > birthDate.month ||
+            (today.getMonth() + 1 === birthDate.month && today.getDate() >= birthDate.day);
+        const age = today.getFullYear() - birthDate.year - (birthdayPassed ? 0 : 1);
+        document.querySelectorAll(".age-value").forEach(function (element) {
+            element.textContent = age;
+        });
+
+    </script>
+</body>
+</html>
